@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
 
 app.post("/payment/create", async (req, res) => {
     const total = parseInt(req.query.total);
-
     const amountInCents = Math.round(total * 100);
     if (amountInCents > 0) {
         try {
@@ -41,7 +40,6 @@ app.post("/payment/create", async (req, res) => {
         });
     }
 });
-
 
 app.listen(5000, (err) => {
     if (err) throw err;
